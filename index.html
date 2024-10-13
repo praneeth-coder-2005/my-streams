@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive M3U8 Stream Player</title>
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.24.1/video-js.css" rel="stylesheet" />
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .video-js {
+            width: 100%;
+            max-width: 800px;
+        }
+        .vjs-fluid {
+            padding-top: 56.25%; /* For a 16:9 aspect ratio */
+        }
+        .video-title-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        .video-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <!-- Title overlay -->
+        <div class="video-title-overlay">West Indies vs Sri Lanka</div>
+
+        <video
+            id="player"
+            class="video-js vjs-default-skin vjs-fluid"
+            controls
+            preload="auto"
+            poster="https://envs.sh/nv7.jpg"  <!-- Poster image as thumbnail -->
+            data-setup='{}'>
+            <source src="https://dai.google.com/ssai/event/NVkw1vF1SImKE2QAWVwfBA/master.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+
+    <!-- Video.js JS -->
+    <script src="https://vjs.zencdn.net/7.24.1/video.min.js"></script>
+</body>
+</html>
