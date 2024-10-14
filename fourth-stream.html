@@ -51,6 +51,29 @@
 </head>
 <body>
 
+    <!-- Telegram Popup -->
+<div id="telegramPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center; z-index: 1000;">
+    <div style="background-color: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 400px;">
+        <h2>Join Our Telegram Channel</h2>
+        <p>Stay updated with the latest live streams by joining our Telegram channel!</p>
+        <a href="https://t.me/cricketmantrabackup" target="_blank" style="display: inline-block; background-color: #0088cc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 18px;">Join Telegram</a>
+        <div id="closePopup" style="margin-top: 20px; cursor: pointer; color: #555; font-size: 14px;">No, thanks</div>
+    </div>
+</div>
+
+<script>
+    // Show popup after 5 seconds
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('telegramPopup').style.display = 'flex';
+        }, 5000);
+    };
+
+    // Close popup
+    document.getElementById('closePopup').onclick = function() {
+        document.getElementById('telegramPopup').style.display = 'none';
+    };
+</script>
     <!-- Fourth Stream: Event Title -->
     <div id="videoPlayer4" class="video-container">
         <div class="video-title-overlay">T20 Spring Challenge</div>
