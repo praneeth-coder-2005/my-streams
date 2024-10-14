@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Live Stream</title>
+    <!-- Video.js CSS -->
+    <link href="https://vjs.zencdn.net/7.24.1/video-js.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .video-js {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .vjs-fluid {
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        .video-title-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Second Stream: Another Live Event -->
+    <div id="videoPlayer2" class="video-container">
+        <div class="video-title-overlay">Uttar Pradesh VS Bengal</div>
+        <video
+            id="player2"
+            class="video-js vjs-default-skin vjs-fluid"
+            controls
+            preload="auto"
+            poster="https://envs.sh/TEC.jpg"  <!-- Poster for the second stream -->
+            data-setup='{}'>
+            <source src="https://prod-sports-eng-gm.jiocinema.com/hls/live/2100306/hd_akamai_merged_avc_eng_cricket_m3_141024/master_p5.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+
+    <!-- Link back to the first page -->
+    <p>
+        <a href="index.html">Go back to First Stream</a>
+    </p>
+
+    <!-- Video.js JS -->
+    <script src="https://vjs.zencdn.net/7.24.1/video.min.js"></script>
+</body>
+</html>
