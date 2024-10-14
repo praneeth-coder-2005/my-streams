@@ -3,76 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fourth Live Stream</title>
-    <!-- Video.js CSS -->
-    <link href="https://vjs.zencdn.net/7.24.1/video-js.css" rel="stylesheet" />
-
+    <title>Embedded Live Stream</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
+            background-color: #f4f4f4;
         }
 
-        .video-js {
+        iframe {
             width: 100%;
-            max-width: 800px;
-            margin-bottom: 30px;
-        }
-
-        .vjs-fluid {
-            padding-top: 56.25%; /* 16:9 aspect ratio */
-        }
-
-        .video-title-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        .video-container {
-            position: relative;
-        }
-
-        .hidden {
-            display: none;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-
-    <!-- Fourth Stream: Event Title -->
-    <div id="videoPlayer4" class="video-container">
-        <div class="video-title-overlay">Coming Soon</div>
-        <video
-            id="player4"
-            class="video-js vjs-default-skin vjs-fluid"
-            controls
-            preload="auto"
-            poster="https://envs.sh/TEU.jpg"  <!-- Poster for the fourth stream -->
-            data-setup='{}'>
-            <source src="https://streamsl.fun/sportsplayer.php?v=star1in" type="application/x-mpegURL">
-        </video>
-    </div>
-
-    <!-- Links to other streams -->
-    <p>
-        <a href="index.html">Go to First Stream</a> |
-        <a href="second-stream.html">Go to Second Stream</a> |
-        <a href="third-stream.html">Go to Third Stream</a>
-    </p>
-
-    <!-- Video.js JS -->
-    <script src="https://vjs.zencdn.net/7.24.1/video.min.js"></script>
+    <iframe 
+        src="https://streamsl.fun/sportsplayer.php?v=skysact" 
+        allowfullscreen="true">
+    </iframe>
 </body>
 </html>
